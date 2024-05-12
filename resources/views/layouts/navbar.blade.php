@@ -2,7 +2,7 @@
     <img src="{{ asset('Aset/Logo/OceanWell\'s Logo.png') }}" class="w-[120px] cursor-pointer" alt="logo">
     <ul>
         <li class="ms-4 inline-block list-none">
-            <x-nav-link href="#" :active="request()->routeIs('aboutus')">About Us</x-nav-link>
+            <x-nav-link href="#" :active="request()->routeIs('dashboard')">About Us</x-nav-link>
         </li>
         <li class="ms-4 inline-block list-none">
             <x-nav-link href="#" :active="request()->routeIs('donate')">Donate</x-nav-link>
