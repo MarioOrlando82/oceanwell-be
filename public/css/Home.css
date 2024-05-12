@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* Halaman 1 -> banner1*/
+.banner1{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.5)),url(../Aset/Background/Homepage1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* navigation bar */
+.navbar{
+    width: 90%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo */
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+/* navigation bar konten scr keseluruhan */
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+/* navigation bar kontennya */
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+/* navigation bar setelah */
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s, background-color 0.5s;
+    background-color: transparent;
+}
+
+/* navbar background kalo dihover */
+.navbar ul li:hover:after{
+    background-color: #01CBE1;
+    width: 100%;
+}
+
+/* navbar kalo dihover */
+.navbar ul li:hover a{
+    color: #01CBE1;
+
+}
+
+/* Konten tulisan homepage 1 */
+.content {
+    width: 100%;
+    height: calc(100vh - 100.83px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #01CBE1;
+    margin-left: 30px;
+}
+
+/* Konten tulisan homepage 1 h1 */
+.content h1{
+    color: #01CBE1;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Konten tulisan homepage 1 h2 */
+.content h2{
+    color: #01CBE1;
+    font-size: 40px;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 800px;
+}
+
+/* Konten tulisan homepage 1 p */
+.content p{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+}
+
+.banner2{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.5)),url(../Aset/Background/Homepage2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    gap: 20px;
+}
+
+.banner2 .content2 h1{
+    text-align: right;
+}
+
+.banner2 .content2 p{
+    text-align: right;
+}
+
+/* konten banner 2 */
+.content2 {
+    width: 100%;
+    text-align: right;
+    color: #01CBE1;
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+/* Konten tulisan homepage 2 h1 */
+.content2 h1{
+    color: #01CBE1;
+    font-size: 80px;
+    text-align: left;
+}
+
+.content2 h1 br{
+    color: #01CBE1;
+    font-size: 80px;
+    margin-top: 800px;
+    text-align: left;
+}
+
+/* Konten tulisan homepage 2 p */
+.content2 p{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Tombol di homepage 2 */
+.button{
+    background-color: #01CBE1;
+    color: white;
+    border-radius: 10px;
+    width: 260px;
+    height: 70px;
+    padding: 15px 30px;
+    font-size: 24px;
+    border: none;
+    margin-right: 50px;
+}
+
+.banner3{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.5)),url(../Aset/Background/Homepage3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content3 {
+    max-width: 800px;
+    text-align: center;
+    color: #01CBE1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Konten tulisan homepage 3 h1 */
+.content3 h1{
+    color: #01CBE1;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Konten tulisan homepage 3 p */
+.content3 p{
+    color: white;
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.content3-wrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 10rem;
+    margin-left: 30px;
+}
+
+/* Footer keseluruhan */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+/* Text footer */
+.footer p{
+    color: white;
+    padding-top: 0px;
+    margin-top: 0px;
+
+}
+
+/* Button 2 di homepage 3 */
+.button2{
+    background-color: #01CBE1;
+    color: white;
+    border-radius: 10px;
+    width: 210px;
+    height: 70px;
+    padding: 15px 30px;
+    font-size: 24px;
+    border: none;
+}
