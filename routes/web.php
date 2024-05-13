@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('Home');
-});
+})->name('home');
 
 Route::get('/article/{id}', [ArticleController::class, 'content'])->name('article.content');
 
