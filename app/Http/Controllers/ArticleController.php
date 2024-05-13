@@ -14,6 +14,12 @@ class ArticleController extends Controller
         $this->articleService = $articleService;
     }
 
+    public function index()
+    {
+        $articles = $this->articleService->getAllArticles();
+        return view('articles.ArticleList')->with(compact('articles'));
+    }
+
     public function content(Request $request)
     {
         $content = $this->articleService->getArticleById($request->id);

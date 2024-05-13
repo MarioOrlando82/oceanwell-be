@@ -22,7 +22,7 @@
 
     <body>
         @include('layouts.navbar')
-        <main class="min-h-[80dvh]">
+        <main class="min-h-[80dvh] bg-[#f5f5f5]">
             {{ $slot }}
         </main>
         @include('layouts.footer')

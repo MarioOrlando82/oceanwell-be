@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Modules\Article;
 
 use App\Models\Article;
-
+use Illuminate\Database\Eloquent\Collection;
 
 class ArticleService
 {
@@ -19,5 +19,10 @@ class ArticleService
     public function getArticleById(int $id): Article
     {
         return $this->articleRepository->getArticleById($id);
+    }
+
+    public function getAllArticles(): Collection
+    {
+        return $this->articleRepository->getAllArticles();
     }
 }

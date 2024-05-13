@@ -9,6 +9,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/article/{id}', [ArticleController::class, 'content'])->name('article.content');
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
