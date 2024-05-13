@@ -7,15 +7,6 @@
 
             #content {
                 text-align: justify;
-
-                p {
-                    margin: 1.125rem 0;
-                }
-
-                h2 {
-                    font-size: 1.125rem;
-                    line-height: 1.75rem;
-                }
             }
         </style>
     </x-slot>
@@ -36,6 +27,7 @@
                 planet in
                 our solar system that is definitely known to contain liquid water.
             </p>
+            <p>&nbsp;</p>
             <p>
                 Although the ocean is one continuous body of water, oceanographers have divided it into five
                 principal
@@ -45,6 +37,7 @@
                 into
                 icy waters around Antarctica.
             </p>
+            <p>&nbsp;</p>
             <h2>
                 <b>Climate</b>
             </h2>
@@ -57,17 +50,20 @@
                 depends
                 on this process, called the water cycle.
             </p>
+            <p>&nbsp;</p>
             <p>
                 The atmosphere receives much of its heat from the ocean. As the sun warms the water, the ocean
                 transfers
                 heat to the atmosphere. In turn, the atmosphere distributes the heat around the globe.
             </p>
+            <p>&nbsp;</p>
             <p>
                 Because water absorbs and loses heat more slowly than land masses, the ocean helps balance
                 global temperatures by absorbing heat in the summer and releasing it in the winter. Without the
                 ocean to
                 help regulate global temperatures, Earth's climate would be bitterly cold.
             </p>
+            <p>&nbsp;</p>
             <h2>
                 <b>Ocean Formation</b>
             </h2>
@@ -79,6 +75,7 @@
                 and
                 mantle.
             </p>
+            <p>&nbsp;</p>
             <p>
                 The ocean's water came from rocks inside the newly forming Earth. As the molten rocks cooled, they
                 released
@@ -87,6 +84,7 @@
                 bottom of
                 the ocean.
             </p>
+            <p>&nbsp;</p>
             <h2>
                 <b>Ocean Floor</b>
             </h2>
@@ -97,6 +95,7 @@
                 SOund Navigation And Ranging. The sonar showed that the ocean floor has dramatic physical features,
                 including huge mountains, deep canyons, steep cliffs, and wide plains.
             </p>
+            <p>&nbsp;</p>
             <p>
                 The ocean's crust is a thin layer of volcanic rock called basalt. The ocean floor is divided into
                 several
@@ -106,6 +105,7 @@
                 shelves
                 vary in width. They are usually wide along low-lying land, and narrow along mountainous coasts.
             </p>
+            <p>&nbsp;</p>
             <p>
                 A shelf is covered in sediment from the nearby continent. Some of the sediment is deposited by
                 rivers
@@ -115,6 +115,7 @@
                 when
                 the oceans receded and exposed the continental shelf. This sediment is called relict sediment.
             </p>
+            <p>&nbsp;</p>
             <p>
                 At the outer edge of the continental shelf, the land drops off sharply in what is called the
                 continental
@@ -124,6 +125,7 @@
                 continental rise. The continental rise descends to the deep ocean floor, which is called the abyssal
                 plain.
             </p>
+            <p>&nbsp;</p>
             <p>
                 Abyssal plains are broad, flat areas that lie at depths of about 4,000 to 6,000 meters (13,123 to
                 19,680
@@ -138,6 +140,7 @@
                 underwater
                 volcanic peaks called seamounts.
             </p>
+            <p>&nbsp;</p>
             <p>
                 Rising from the abyssal plains in each major ocean is a huge chain of mostly undersea mountains.
                 Called
@@ -152,6 +155,7 @@
                 Ocean
                 and is known as the Mid-Atlantic Ridge. It was not directly seen or explored until 1973.
             </p>
+            <p>&nbsp;</p>
             <p>
                 Some areas of the ocean floor have deep, narrow depressions called ocean trenches. They are the
                 deepest
