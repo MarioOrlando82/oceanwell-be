@@ -13,7 +13,7 @@
 
     <body>
         @include('layouts.navbar')
-        <main class="h-[80dvh]">
+        <main class="min-h-[80dvh]">
             {{ $slot }}
         </main>
         @include('layouts.footer')
