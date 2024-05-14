@@ -18,12 +18,18 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = DB::table('articles')->paginate(4);
-        return view('articles.ArticleList')->with(['articles' => $articles]);
+        return view('article.ArticleList')->with(['articles' => $articles]);
     }
 
     public function content(Request $request)
     {
         $content = $this->articleService->getArticleById($request->id);
-        return view('articles.ArticleContent')->with(compact('content'));
+        dd($request);
+        return view('article.ArticleContent')->with(compact('content'));
+    }
+
+    public function create(Request $request)
+    {
+        return view('article.ArticleCreate');
     }
 }

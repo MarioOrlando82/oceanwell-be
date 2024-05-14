@@ -13,7 +13,7 @@
             <x-nav-link :href="route('index')" :active="request()->routeIs('index')">Volunteer</x-nav-link>
         </li>
         <li class="ms-4 inline-block list-none">
-            <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.index')">Articles</x-nav-link>
+            <x-nav-link :href="route('article.index')" :active="request()->routeIs('article.*')">Article</x-nav-link>
         </li>
         @if (!Auth::check())
             <li class="ms-4 inline-block list-none">

@@ -13,9 +13,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/article/{id}', [ArticleController::class, 'content'])->name('article.content');
-Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
 
-Route::middleware('is_admin')->group(function(){
+Route::middleware('is_admin')->group(function () {
     Route::get('/create-donation', [DonationController::class, 'create'])->name('create');
     Route::post('/store-donation', [DonationController::class, 'store'])->name('store');
     Route::get('/edit-donation/{id}', [DonationController::class, 'edit'])->name('edit');
@@ -27,6 +27,12 @@ Route::middleware('is_admin')->group(function(){
     Route::get('/edit-volunteer/{id}', [VolunteerController::class, 'edit'])->name('edit');
     Route::patch('/update-volunteer/{id}', [VolunteerController::class, 'update'])->name('update');
     Route::delete('/delete-volunteer/{id}', [VolunteerController::class, 'delete'])->name('delete');
+
+    Route::get('/create-article', [ArticleController::class, 'create'])->name('article.create');
+    Route::post('/store-article', [ArticleController::class, 'store'])->name('article.store');
+    Route::get('/edit-article', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::patch('/update-article', [ArticleController::class, 'update'])->name('article.update');
+    Route::delete('/delete-article', [ArticleController::class, 'delete'])->name('article.delete');
 });
 
 Route::get('/donation', [DonationController::class, 'index'])->name('index');
