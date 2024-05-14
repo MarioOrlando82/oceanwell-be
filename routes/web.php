@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\VolunteerController;
@@ -9,7 +10,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('Home');
-});
+})->name('home');
+
+Route::get('/article/{id}', [ArticleController::class, 'content'])->name('article.content');
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
 Route::middleware('is_admin')->group(function(){
     Route::get('/create-donation', [DonationController::class, 'create'])->name('create');
@@ -42,4 +46,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+
+
+require __DIR__ . '/auth.php';
