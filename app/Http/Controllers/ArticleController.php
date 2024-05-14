@@ -3,33 +3,74 @@
 namespace App\Http\Controllers;
 
 use App\Http\Modules\Article\ArticleService;
+use App\Http\Modules\ArticleCategory\ArticleCategoryService;
+use App\Http\Requests\StoreArticleRequest;
+use App\Http\Requests\UpdateArticleRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
     private ArticleService $articleService;
+    private ArticleCategoryService $articleCategoryService;
 
-    public function __construct(ArticleService $articleService)
+    public function __construct(ArticleService $articleService, ArticleCategoryService $articleCategoryService)
     {
         $this->articleService = $articleService;
+        $this->articleCategoryService = $articleCategoryService;
     }
 
     public function index()
     {
-        $articles = DB::table('articles')->paginate(4);
-        return view('article.ArticleList')->with(['articles' => $articles]);
+        $articles = $this->articleService->getAllArticlesWithPagination(4);
+        $articleCategories = $this->articleCategoryService->getAllArticleCategory();
+        return view('article.ArticleList')->with(compact(['articles', 'articleCategories']));
     }
 
     public function content(Request $request)
     {
         $content = $this->articleService->getArticleById($request->id);
-        dd($request);
         return view('article.ArticleContent')->with(compact('content'));
     }
 
-    public function create(Request $request)
+    public function create()
     {
-        return view('article.ArticleCreate');
+        $articleCategories = $this->articleCategoryService->getAllArticleCategory();
+        return view('article.ArticleCreate')->with(compact('articleCategories'));
+    }
+
+    public function edit(Request $request)
+    {
+        $article = $this->articleService->getArticleById($request->id);
+        $articleCategories = $this->articleCategoryService->getAllArticleCategory();
+        return view('article.ArticleEdit')->with(compact(['article', 'articleCategories']));
+    }
+
+    public function store(StoreArticleRequest $request)
+    {
+        $validated = $request->validated();
+        $validated['image'] = $this->articleService->storeImageBanner($request->file('image'));
+
+        $response = $this->articleService->storeArticle($validated);
+
+        return
+            $response
+            ? redirect()->back()->with('success', 'Succesfully Create New Article')
+            : redirect()->back()->with('error', 'Oops! Something Went Wrong');
+    }
+
+    public function update(UpdateArticleRequest $request)
+    {
+        $validated = $request->validated();
+        if ($request->hasFile('image')) {
+            $validated['image'] = $this->articleService->storeImageBanner($request->file('image'));
+        }
+
+        $response = $this->articleService->updateArticle($request->id, $validated);
+
+        return
+            $response
+            ? redirect()->back()->with('success', 'Succesfully Update Article')
+            : redirect()->back()->with('error', 'Oops! Something Went Wrong');
     }
 }

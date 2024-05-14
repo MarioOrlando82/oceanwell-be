@@ -23,6 +23,7 @@ class ArticleFactory extends Factory
             'title' => $article['title'],
             'author_name' => $article['author_name'],
             'image' => $article['image'],
+            'article_category_id' => $article['article_category_id'],
             'content' => $article['content'],
         ];
     }
@@ -34,6 +35,7 @@ class ArticleFactory extends Factory
                 'title' => 'All About The Ocean',
                 'author_name' => 'Mario Chao',
                 'image' => '1.jpg',
+                "article_category_id" => fake()->numberBetween(1, 3),
                 'content' =>
                 "<p>The ocean covers 70 percent of Earth's surface. It contains about 1.35 billion cubic kilometers (324 million cubic miles) of water, which is about 97 percent of all the water on Earth. The ocean makes all life on Earth possible, and makes the planet appear blue when viewed from space. Earth is the only planet in our solar system that is definitely known to contain liquid water.</p>
             <p>&nbsp;</p>
@@ -70,10 +72,11 @@ class ArticleFactory extends Factory
                 'title' => 'The Menace Below: Understanding the Impact of Microplastics in Our Oceans',
                 'author_name' => 'Mario Chao',
                 'image' => '2.jpg',
+                "article_category_id" => fake()->numberBetween(1, 3),
                 'content' =>
                 "<p>The oceans, vast and seemingly endless, harbor a hidden threat beneath their shimmering waves: microplastics. These minuscule plastic particles, often invisible to the naked eye, have become ubiquitous in marine environments, posing a significant risk to marine life and ultimately, human health. In this article, we delve into the world of microplastics, exploring their origins, impact, and the urgent need for global action to mitigate their harmful effects on ocean ecosystems.</p>
             <p>&nbsp;</p>
-            <h2>What are Microplastics?</h2>
+            <h2><b>What are Microplastics?</b></h2>
             <p>Microplastics are tiny pieces of plastic debris, typically less than 5 millimeters in size, that originate from the breakdown of larger plastic items or are intentionally manufactured for use in products such as microbeads in personal care products, synthetic fibers in clothing, and pellets used in industrial processes. These particles can be categorized into two main types: primary microplastics, which are directly released into the environment in their small size, and secondary microplastics, which result from the fragmentation of larger plastic items over time due to exposure to sunlight, waves, and physical abrasion.</p>
             <p>&nbsp;</p>
             <h2><b>Sources and Pathways:</b></h2>
@@ -93,6 +96,7 @@ class ArticleFactory extends Factory
                 'title' => 'Exploring the Wonders of Marine Life in the Ocean',
                 'author_name' => 'Mario Chao',
                 'image' => '3.jpg',
+                "article_category_id" => fake()->numberBetween(1, 3),
                 'content' =>
                 "<p>The ocean covers more than 70% of the Earth's surface and is home to an incredibly diverse array of life forms. From the smallest plankton to the largest whales, marine life encompasses a vast range of species adapted to thrive in various marine ecosystems. Let's embark on a journey beneath the waves to discover the fascinating world of marine life.</p>
             <p>&nbsp;</p>
@@ -116,6 +120,7 @@ class ArticleFactory extends Factory
                 'title' => 'The Plight of Our Oceans: Understanding the Impact of Trash in the Sea',
                 'author_name' => 'Mario Chao',
                 'image' => '4.jpg',
+                "article_category_id" => fake()->numberBetween(1, 3),
                 'content' =>
                 "<p>The world's oceans, once teeming with life and vitality, are now facing a silent crisis: the pervasive presence of trash. From plastic bottles and bags to abandoned fishing gear, our oceans have become dumping grounds for human waste, posing grave threats to marine ecosystems and biodiversity. In this article, we delve into the devastating impact of trash in the ocean and explore solutions to address this pressing environmental issue.</p>
             <p>&nbsp;</p>
@@ -137,6 +142,7 @@ class ArticleFactory extends Factory
                 'title' => 'Unveiling the Marvels: Exploring the Benefits of the Ocean',
                 'author_name' => 'Mario Chao',
                 'image' => '5.jpg',
+                "article_category_id" => fake()->numberBetween(1, 3),
                 'content' =>
                 "<p>The ocean, covering more than 70% of the Earth's surface, is not only a vast expanse of water but also a source of numerous benefits essential for life on our planet. From providing food and livelihoods to regulating the climate and supporting biodiversity, the ocean plays a crucial role in sustaining life. In this article, we delve into the myriad benefits of the ocean and why its preservation is vital for the well-being of humanity and the planet.</p>
             <p>&nbsp;</p>

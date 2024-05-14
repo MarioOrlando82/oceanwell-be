@@ -4,11 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Volunteer;
-
-use App\Models\Article;
+use App\Models\ArticleCategory;
 use App\Models\User;
-use App\Models\Volunteer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -42,6 +39,12 @@ class DatabaseSeeder extends Seeder
             'dob' => '1998-05-21',
             'password' => bcrypt('user'),
         ]);
+
+        foreach (ArticleCategory::$categoryList as $category) {
+            ArticleCategory::create([
+                'name' => $category,
+            ]);
+        }
 
         $this->call([
             DonationSeeder::class,

@@ -30,9 +30,9 @@ Route::middleware('is_admin')->group(function () {
 
     Route::get('/create-article', [ArticleController::class, 'create'])->name('article.create');
     Route::post('/store-article', [ArticleController::class, 'store'])->name('article.store');
-    Route::get('/edit-article', [ArticleController::class, 'edit'])->name('article.edit');
-    Route::patch('/update-article', [ArticleController::class, 'update'])->name('article.update');
-    Route::delete('/delete-article', [ArticleController::class, 'delete'])->name('article.delete');
+    Route::get('/edit-article/{id}', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::patch('/update-article/{id}', [ArticleController::class, 'update'])->name('article.update');
+    Route::delete('/delete-article/{id}', [ArticleController::class, 'delete'])->name('article.delete');
 });
 
 Route::get('/donation', [DonationController::class, 'index'])->name('index');
