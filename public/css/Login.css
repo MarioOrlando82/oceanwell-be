@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins';
+    overflow-x: hidden;
 }
 
 /* semua isi page login */
@@ -34,7 +37,8 @@
 .logo img{
     max-width: 100%;
     max-height: 100%;
-    margin-left: 150px;
+    width: 45vh;
+    margin-left: 27vh;
 }
 
 /* keseluruhan login */
@@ -148,27 +152,27 @@
     width: 17px;
     background-color: #D9D9D9;
     border-radius: 2px;
-}
+  }
 
   /* When the checkbox is checked, add a blue background */
-.wrapper .rememberForgot input:checked ~ .checkmark {
+  .wrapper .rememberForgot input:checked ~ .checkmark {
     background-color: #2196F3;
-}
+  }
 
   /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+  .checkmark:after {
     content: "";
     position: absolute;
     display: none;
-}
+  }
 
   /* Show the checkmark when checked */
-.wrapper .rememberForgot input:checked ~ .checkmark:after {
+  .wrapper .rememberForgot input:checked ~ .checkmark:after {
     display: block;
-}
+  }
 
   /* Style the checkmark/indicator */
-.wrapper .rememberForgot .checkmark:after {
+  .wrapper .rememberForgot .checkmark:after {
     left: 5.5px;
     top: 1.5px;
     width:4px;
@@ -178,4 +182,4 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-}
+  }

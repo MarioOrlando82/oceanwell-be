@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+/* navigation bar */
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 1vh 0 1vh 0;
+    background-color: #01283C;
+    margin: auto;
+    /* padding: 35px 0; */
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+.nav-wrap{
+    /* width: 95%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5% 0 5%;
+}
+
+/* logo */
+.logo-nav{
+    width: 20vh;
+    /* padding-left: 5%; */
+    cursor: pointer;
+}
+
+.logo-foot{
+    width: 20vh;
+    /* padding-left: 5%; */
+    cursor: pointer;
+}
+
+/* navigation bar konten scr keseluruhan */
+.nav-wrap ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 2.3vh;
+    padding:0 2vh;
+}
+
+/* navigation bar kontennya */
+.nav-wrap ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* navigation bar setelah */
+.nav-wrap ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s, background-color 0.5s;
+    background-color: transparent;
+}
+
+/* navbar background kalo dihover */
+.nav-wrap ul li:hover:after{
+    background-color: #01CBE1;
+    width: 100%;
+}
+
+/* navbar kalo dihover */
+.nav-wrap ul li:hover a{
+    color: #01CBE1;
+
+}
+
+/* Footer keseluruhan */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    background-color: #01283C;
+}
+
+/* Text footer */
+.footer p{
+    padding-top: 0px;
+    margin-top: 0px;
+    color: white;
+}

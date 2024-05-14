@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+.DownContentWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.RightContent button{
+    border: none;
+    background-color: green;
+    padding: 2px;
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.RightContent button a{
+    color: white;
+}
+
+.delete{
+    cursor: pointer;
+    border: none;
+    background-color: red;
+    padding: 2px;
+    width: 50px;
+    border-radius: 10px;
+    color: white;
+}
