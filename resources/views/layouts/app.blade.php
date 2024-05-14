@@ -7,8 +7,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link rel="shortcut icon" href="{{ asset('Aset/Logo/favicon.png') }}" type="image/x-icon">
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @if (file_exists(public_path('build/assets')))
+            <link rel="stylesheet" href="{{ asset('build/assets/css/app.css') }}">
+            <script src="{{ asset('build/assets/js/app2.js') }}" defer></script>
+        @else
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @endif
         <!-- Poppins -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
