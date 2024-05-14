@@ -34,4 +34,9 @@ class ArticleRepository
     {
         return Article::findOrFail($id)->update($data);
     }
+
+    public function deleteArticle(int $id): bool
+    {
+        return Article::findOrFail($id)->delete();
+    }
 }

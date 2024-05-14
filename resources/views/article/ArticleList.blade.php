@@ -50,9 +50,13 @@
                                                 <a href="{{ route('article.edit', ['id' => $article->id]) }}"><img
                                                         src="{{ asset('Aset/Icon/Edit.png') }}" alt="edit"
                                                         class="me-2 h-6 object-cover"></a>
-                                                <a href="{{ route('article.delete', ['id' => $article->id]) }}"><img
-                                                        src="{{ asset('Aset/Icon/Delete.png') }}" alt="delete"
-                                                        class="h-6 object-cover"></a>
+                                                <form action="{{ route('article.delete', ['id' => $article->id]) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    {{ method_field('DELETE') }}
+                                                    <button type="submit"><img src="{{ asset('Aset/Icon/Delete.png') }}"
+                                                            alt="delete" class="h-6 object-cover"></button>
+                                                </form>
                                             </div>
                                         @endcan
                                     </div>
@@ -76,4 +80,17 @@
             </div>
         </div>
     </div>
+    @can('is_admin')
+        <x-alertify />
+        @if (session('success'))
+            <script>
+                alertify.success("{{ session('success') }}")
+            </script>
+        @elseif (session('error'))
+            <script>
+                alertify.error("{{ session('error') }}")
+            </script>
+        @endif
+
+    @endcan
 </x-app-layout>

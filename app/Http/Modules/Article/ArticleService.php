@@ -54,4 +54,9 @@ class ArticleService
     {
         return $this->articleRepository->updateArticle($id, $data);
     }
+
+    public function deleteArticle(int $id): bool
+    {
+        return $this->articleRepository->deleteArticle($id);
+    }
 }
