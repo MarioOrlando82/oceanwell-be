@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\VolunteerController;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +17,21 @@ Route::middleware('is_admin')->group(function(){
     Route::get('/edit-donation/{id}', [DonationController::class, 'edit'])->name('edit');
     Route::patch('/update-donation/{id}', [DonationController::class, 'update'])->name('update');
     Route::delete('/delete-donation/{id}', [DonationController::class, 'delete'])->name('delete');
+
+    Route::get('/create-volunteer', [VolunteerController::class, 'create'])->name('create');
+    Route::post('/store-volunteer', [VolunteerController::class, 'store'])->name('store');
+    Route::get('/edit-volunteer/{id}', [VolunteerController::class, 'edit'])->name('edit');
+    Route::patch('/update-volunteer/{id}', [VolunteerController::class, 'update'])->name('update');
+    Route::delete('/delete-volunteer/{id}', [VolunteerController::class, 'delete'])->name('delete');
 });
+
 Route::get('/donation', [DonationController::class, 'index'])->name('index');
 Route::get('/detail-donation/{id}', [DonationController::class, 'detail'])->name('detail');
 Route::patch('/update-total/{id}', [DonationController::class, 'update_total'])->name('update_total');
 
+Route::get('/volunteer', [VolunteerController::class, 'index'])->name('index');
+Route::get('/detail-volunteer/{id}', [VolunteerController::class, 'detail'])->name('detail');
+Route::patch('/update-total/{id}', [VolunteerController::class, 'update_total'])->name('update_total');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Donation - OceanWell</title>
+    <title>Edit Volunteer - OceanWell</title>
     <link rel="stylesheet" href="{{asset('css/Edit.css')}}">
     <link rel="stylesheet" href="{{asset('css/NavFoot.css')}}">
 
@@ -44,7 +44,7 @@
         <label for="header"><h1>Edit Page</h1></label>
         </div>
 
-        <form action="/update-donation/{{ $donation->id }}" method="POST" enctype="multipart/form-data">
+        <form action="/update-volunteer/{{ $volunteer->id }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('patch')
         <div class="form-box">
@@ -52,15 +52,15 @@
             <div class="form-column" id="column-left">
             <div class="form-input">
                 <label for="title">Title</label>
-                <input type="text" id="title" name="Title" value="{{$donation->Title}}"/>
+                <input type="text" id="title" name="Title" value="{{$volunteer->Title}}"/>
             </div>
             <div class="form-input">
                 <label for="author">Fundraiser</label>
-                <input type="text" id="author" name="Fundraiser" value="{{$donation->Fundraiser}}" />
+                <input type="text" id="author" name="Fundraiser" value="{{$volunteer->Fundraiser}}" />
             </div>
             <div class="form-input">
-                <label for="number">Limit</label>
-                <input type="number" id="people" name="Limit" value="{{$donation->Limit}}"/>
+                <label for="number">People</label>
+                <input type="number" id="people" name="People" value="{{$volunteer->People}}"/>
             </div>
             <div class="form-input">
                 <label for="image">Image</label>
@@ -71,7 +71,7 @@
             <div class="form-column">
             <div class="form-input">
                 <label for="editor">Description</label>
-                <input type="text" id="description" name="Description" value="{{$donation->Description}}" />
+                <input type="text" id="description" name="Description" value="{{$volunteer->Description}}" />
             </div>
             </div>
         </div>
