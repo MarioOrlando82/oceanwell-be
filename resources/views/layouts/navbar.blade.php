@@ -7,10 +7,10 @@
             <x-nav-link href="#" :active="request()->routeIs('dashboard')">About Us</x-nav-link>
         </li>
         <li class="ms-4 inline-block list-none">
-            <x-nav-link href="#" :active="request()->routeIs('donate')">Donate</x-nav-link>
+            <x-nav-link href="/donation" :active="request()->routeIs('donate')">Donate</x-nav-link>
         </li>
         <li class="ms-4 inline-block list-none">
-            <x-nav-link :href="route('index')" :active="request()->routeIs('index')">Volunteer</x-nav-link>
+            <x-nav-link href="/volunteer" :active="request()->routeIs('index')">Volunteer</x-nav-link>
         </li>
         <li class="ms-4 inline-block list-none">
             <x-nav-link :href="route('article.index')" :active="request()->routeIs('article.*')">Article</x-nav-link>
