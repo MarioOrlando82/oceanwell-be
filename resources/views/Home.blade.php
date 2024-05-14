@@ -11,14 +11,14 @@
         <div class="navbar">
             <img src="../Aset/Logo/OceanWell's Logo.png" class="logo" alt="">
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Donate</a></li>
-                <li><a href="#">Volunteer</a></li>
-                <li><a href="#">Articles</a></li>
+                <li><a href="/aboutUs">About Us</a></li>
+                <li><a href="/donation">Donate</a></li>
+                <li><a href="/volunteer">Volunteer</a></li>
+                <li><a href="/articles">Articles</a></li>
                 @if (Auth::user())
-                    <form action="/logout" method="POST">
+                    <li><a href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log Out</a></li>
+                    <form id="logout-form" action="/logout" method="POST" style="display: none;">
                         @csrf
-                        <li><button type="submit" href="#">Log Out</button></li>
                     </form>
                 @else
                 <li><a href="/login">Login</a></li>
@@ -38,7 +38,7 @@
             <p>50% - 85% of the world’s oxygen comes from the oceans
                 and they also help regulate the climate. </p>
         </div>
-        <button class="button">Donate Now</button>
+        <button class="button" onclick="location.href='/donation'">Donate Now</button>
     </div>
     <div class="banner3">
         <div class="content3-wrapper">
@@ -47,7 +47,7 @@
                     WANTED!</b></h1>
                 <p>We've built a fantastic community to support our
                     ideas, and we're looking for adventurers to join the mission!</p>
-                <button class="button2">Join Now</button>
+                <button class="button2" onclick="location.href='/volunteer'">Join Now</button>
             </div>
         </div>
         <div class="footer">

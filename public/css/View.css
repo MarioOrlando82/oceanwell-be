@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+.Content-Box{
+    width: 175vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.Gambar{
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.Gambar img{
+    width: 175vh;
+    height: 50vh;
+}
+
+h2{
+    font-size: 20px;
+}
+.Content-Wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    margin-top: 5vh;
+}
+
+.Left-Content p{
+    font-size: 12px;
+    margin:1vh;
+}
+
+.Left-Content{
+    display: flex;
+    background-color: #E6F5FB;
+    border-radius: 2vh;
+}
+
+.Mid-Content{
+    width: 150vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E6F5FB;
+    border-radius: 2vh;
+}
+
+.Mid-Content h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.Target-Wrapper{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.Right-Content{
+    width: 200vh;
+    background-color: #E6F5FB;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.Right-Content .InputWrapper{
+    margin-top: 1vh;
+}
+
+.Right-Content input{
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    text-align: center;
+    border-radius: 1vh;
+    font-size: 20px;
+    border-style: none;
+}
+
+
+.Right-Content Button{
+    width: 55vh;
+    height: 7vh;
+    border-radius: 1vh;
+    border-style: none;
+    background-color: #01CBE1;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
