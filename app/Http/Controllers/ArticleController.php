@@ -7,7 +7,6 @@ use App\Http\Modules\ArticleCategory\ArticleCategoryService;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -71,6 +70,16 @@ class ArticleController extends Controller
         return
             $response
             ? redirect()->back()->with('success', 'Succesfully Update Article')
+            : redirect()->back()->with('error', 'Oops! Something Went Wrong');
+    }
+
+    public function delete(Request $request)
+    {
+        $response = $this->articleService->deleteArticle($request->id);
+
+        return
+            $response
+            ? redirect()->back()->with('success', 'Succesfully Delete Article')
             : redirect()->back()->with('error', 'Oops! Something Went Wrong');
     }
 }
