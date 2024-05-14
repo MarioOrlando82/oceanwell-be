@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+.Popup{
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    right: 25%;
+    left: 25%;
+    height: 100%;
+}
+
+.Popup-Wrapper{
+    background-color: #EAE6E6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50vh;
+    height: 60vh;
+    justify-content: space-around;
+    margin: auto;
+    border-radius: 2vh;
+    border-style: solid;
+}
+
+.Logo-exit{
+   width: 40vh;
+   display: flex;
+   flex-direction: row-reverse;
+}
+
+.Logo-img img{
+    width: 15vh;
+}
+
+.Logo-pay img{
+    width: 35vh;
+}
+
+.Popup-text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.Popup-text h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Popup-text h2{
+    font-size: 24px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.Popup-text button{
+    margin-top: 2vh;
+    width: 40vh;
+    height: 6vh;
+    background-color: #01CBE1;
+    color: white;
+    border-style: none;
+    border-radius: 1vh;
+    font-size: 24px;
+
+}
+
+.Announcement-Box{
+    background-color: #D9D9D9;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    width: 60vh;
+    height: 65vh;
+    border-radius: 1vh;
+
+}
+
+.Announcement-Wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.Announcement-img{
+    margin-top: 5vh;
+}
+
+.Announcement-img img{
+    width: 13vh;
+}
+
+.Announcement-Text{
+    text-align: center;
+    width: 80%;
+}
+
+.Announcement-Text h2{
+    font-size: 24px;
+    font-weight: 450;
+}
+
+.Announcement-Text h1{
+    font-size: 64px;
+    font-weight: 700;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.Announcement-Text h3{
+    font-size: 16px;
+    font-weight: 350;
+}
+
+.Announcement-Btn button{
+    width: 45vh;
+    height: 5vh;
+    border-radius: 1vh;
+    border-style: none;
+    background-color: #01CBE1;
+    font-size: 24px;
+    color: white;
+    overflow: hidden;
+}
+
+.Announcement-Btn{
+    margin-bottom: 2vh;
+}
+
+.announcement{
+    background-color: #EAE6E6;
+}
+

@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Article;
 use App\Models\User;
+use App\Models\Volunteer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,21 +22,6 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
-        /*
-            $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email')->unique();
-            $table->string('phone_number')->nullable();
-            $table->string('dob');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->integer('is_admin')->default(0);
-            $table->rememberToken();
-            $table->timestamps();
-        */
-
         User::create([
             'first_name' => 'admin',
             'last_name' => 'admin',
@@ -190,6 +176,9 @@ class DatabaseSeeder extends Seeder
             <p>The ocean is a treasure trove of potential medical resources and scientific discoveries. Marine organisms produce compounds with unique biochemical properties that have the potential to be developed into pharmaceuticals for treating various diseases. Furthermore, the ocean remains largely unexplored, with vast expanses of the deep sea yet to be discovered and studied, holding untold secrets and opportunities for scientific advancement.</p>
 
             "
+        $this->call([
+            DonationSeeder::class,
+            VolunteerSeeder::class,
         ]);
     }
 }

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins';
     overflow-x: hidden;
 }
 
@@ -26,7 +28,7 @@
 
 /* logo */
 .logo{
-    width: 120px;
+    width: 20vh;
     cursor: pointer;
 }
 
@@ -41,8 +43,9 @@
 .navbar ul li a{
     text-decoration: none;
     color: white;
-
+    font-size: 2.3vh;
 }
+
 
 /* navigation bar setelah */
 .navbar ul li::after{
@@ -76,24 +79,27 @@
     justify-content: center;
     text-align: center;
     color: #01CBE1;
-    margin-left: 30px;
+    margin-left: 5%;
+    width: 50%;
+    height: 75%;
 }
 
 /* Konten tulisan homepage 1 h1 */
 .content h1{
     color: #01CBE1;
-    font-size: 70px;
-    font-weight: bold;
+    font-size:80px;
+    font-weight: bolder;
     text-align: left;
 }
 
 /* Konten tulisan homepage 1 h2 */
 .content h2{
     color: #01CBE1;
-    font-size: 40px;
-    margin-top: 20px;
+    font-size: 44px;
+    /* margin-top: 20px; */
     text-align: left;
     max-width: 800px;
+    font-weight: 450;
 }
 
 /* Konten tulisan homepage 1 p */
@@ -121,6 +127,8 @@
 
 .banner2 .content2 h1{
     text-align: right;
+    font-weight: 300;
+    font-size: 7vh;
 }
 
 .banner2 .content2 p{
@@ -133,7 +141,7 @@
     text-align: right;
     color: #01CBE1;
     max-width: 700px;
-    margin-right: 50px;
+    margin-right: 5%;
 }
 
 /* Konten tulisan homepage 2 h1 */
@@ -168,7 +176,7 @@
     padding: 15px 30px;
     font-size: 24px;
     border: none;
-    margin-right: 50px;
+    margin-right: 5%;
 }
 
 .banner3{
@@ -212,7 +220,7 @@
     display: flex;
     align-items: center;
     margin-top: 10rem;
-    margin-left: 30px;
+    margin-left: 5%;
 }
 
 /* Footer keseluruhan */
