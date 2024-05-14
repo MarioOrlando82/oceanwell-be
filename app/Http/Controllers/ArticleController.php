@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Modules\Article\ArticleService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -16,13 +17,19 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = $this->articleService->getAllArticles();
-        return view('articles.ArticleList')->with(compact('articles'));
+        $articles = DB::table('articles')->paginate(4);
+        return view('article.ArticleList')->with(['articles' => $articles]);
     }
 
     public function content(Request $request)
     {
         $content = $this->articleService->getArticleById($request->id);
-        return view('articles.ArticleContent')->with(compact('content'));
+        dd($request);
+        return view('article.ArticleContent')->with(compact('content'));
+    }
+
+    public function create(Request $request)
+    {
+        return view('article.ArticleCreate');
     }
 }
