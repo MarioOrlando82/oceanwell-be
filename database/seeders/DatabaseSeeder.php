@@ -8,6 +8,7 @@ use App\Models\Volunteer;
 
 use App\Models\Article;
 use App\Models\User;
+use App\Models\Volunteer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -41,7 +42,6 @@ class DatabaseSeeder extends Seeder
             'dob' => '1998-05-21',
             'password' => bcrypt('user'),
         ]);
-
 
         $this->call([
             DonationSeeder::class,
