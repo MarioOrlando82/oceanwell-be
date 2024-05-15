@@ -59,4 +59,9 @@ class ArticleService
     {
         return $this->articleRepository->deleteArticle($id);
     }
+
+    public function getArticleByCategoryWithPagination(int $articleCategoryId, int $perPage): LengthAwarePaginator
+    {
+        return $this->articleRepository->getArticleByCategoryWithPagination($articleCategoryId, $perPage);
+    }
 }

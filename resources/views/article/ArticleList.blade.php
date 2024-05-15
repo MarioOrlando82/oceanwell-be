@@ -4,20 +4,42 @@
             #articleContent p {
                 text-overflow: ellipsis;
             }
-
-            #paginator a {}
         </style>
     </x-slot>
     <div class="flex min-h-[80dvh] w-full">
         <div class="m-auto h-[75dvh] w-[95vw] rounded-lg bg-[#eae6e6] p-5">
             <div class="flex h-full flex-col">
-                <div class="mb-6 flex w-full justify-center">
-                    <h1 class="mt-3 text-center text-3xl font-bold text-[#01283C]">Article List</h1>
+                <div class="mx-auto mb-6 flex w-11/12 justify-between">
+                    <div class="flex w-1/3 align-middle">
+                        <form id="articleCategoryForm" action="{{ route('article.index') }}" method="GET"
+                            class="flex w-1/2">
+                            {{-- @csrf --}}
+                            <select name="selectedCategory"
+                                class="my-auto h-fit w-full rounded-md border-0 bg-[#f0f0f0] p-3 text-xs"
+                                onchange="this.closest('form').submit()">
+                                <option value="0">All Category</option>
+                                @foreach ($articleCategories as $articleCateogory)
+                                    <option value="{{ $articleCateogory->id }}"
+                                        @if (old('articleCategory') == $articleCateogory->id) selected
+                                        @elseif (isset($selectedCategory) && $selectedCategory == $articleCateogory->id) selected @endif>
+                                        {{ $articleCateogory->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </form>
+                    </div>
+                    <div class="flex w-1/3 place-items-center">
+                        <h1 class="mx-auto text-center text-3xl font-bold text-[#01283C]">Article List</h1>
+                    </div>
                     @can('is_admin')
-                        <a href="{{ route('article.create') }}"
-                            class="absolute right-16 rounded-md border-0 bg-[#01cbe1] p-3 text-xl text-white">
-                            Add Article
-                        </a>
+                        <div class="flex w-1/3 place-content-end">
+                            <a href="{{ route('article.create') }}"
+                                class="rounded-md border-0 bg-[#01cbe1] p-3 text-lg text-white">
+                                Add Article
+                            </a>
+                        </div>
+                    @else
+                        <div class="w-1/3"></div>
                     @endcan
                 </div>
                 <div class="flex w-full flex-col items-center">
@@ -74,7 +96,7 @@
                 </div>
                 <div class="mt-auto flex w-full justify-around">
                     <div id="paginator" class="w-11/12">
-                        {{ $articles->links() }}
+                        {{ $articles->appends($_GET)->links() }}
                     </div>
                 </div>
             </div>
@@ -91,6 +113,5 @@
                 alertify.error("{{ session('error') }}")
             </script>
         @endif
-
     @endcan
 </x-app-layout>

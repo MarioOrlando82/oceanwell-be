@@ -39,4 +39,9 @@ class ArticleRepository
     {
         return Article::findOrFail($id)->delete();
     }
+
+    public function getArticleByCategoryWithPagination(int $articleCategoryId, int $perPage): LengthAwarePaginator
+    {
+        return Article::where('article_category_id', $articleCategoryId)->paginate($perPage);
+    }
 }
