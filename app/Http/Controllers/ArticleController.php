@@ -19,8 +19,15 @@ class ArticleController extends Controller
         $this->articleCategoryService = $articleCategoryService;
     }
 
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->has('selectedCategory') && $request->selectedCategory != 0) {
+            $selectedCategory = $request->selectedCategory;
+            $articles = $this->articleService->getArticleByCategoryWithPagination($selectedCategory, 4);
+            $articleCategories = $this->articleCategoryService->getAllArticleCategory();
+            return view('article.ArticleList')->with(compact(['articles', 'articleCategories', 'selectedCategory']));
+        }
+
         $articles = $this->articleService->getAllArticlesWithPagination(4);
         $articleCategories = $this->articleCategoryService->getAllArticleCategory();
         return view('article.ArticleList')->with(compact(['articles', 'articleCategories']));
