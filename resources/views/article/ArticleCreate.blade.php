@@ -10,6 +10,10 @@
                     height: 375px;
                 }
             }
+
+            .ck-editor__editable_inline {
+                padding: 0 1.5rem !important;
+            }
         </style>
     </x-slot>
     <div class="flex min-h-[80dvh] w-full">
