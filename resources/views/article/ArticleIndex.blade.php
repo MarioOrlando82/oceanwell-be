@@ -67,7 +67,8 @@
                                 <div class="multiline-elipsis h-1/3 w-full text-[0.65rem]">
                                     {!! explode('</p>', $article->content)[0] . '</p>' !!}
                                 </div>
-                                <button class="mt-1 border text-[0.65rem]">Read More</button>
+                                <a class="mt-1 border text-[0.65rem]"
+                                    href="{{ route('article.content', ['id' => $article->id]) }}">Read More</a>
                             </div>
                         </div>
                     @endforeach
