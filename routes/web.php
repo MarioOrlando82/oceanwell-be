@@ -28,6 +28,7 @@ Route::middleware('is_admin')->group(function () {
     Route::patch('/update-volunteer/{id}', [VolunteerController::class, 'update'])->name('update');
     Route::delete('/delete-volunteer/{id}', [VolunteerController::class, 'delete'])->name('delete');
 
+    Route::get('/list-article', [ArticleController::class, 'list'])->name('article.list');
     Route::get('/create-article', [ArticleController::class, 'create'])->name('article.create');
     Route::post('/store-article', [ArticleController::class, 'store'])->name('article.store');
     Route::get('/edit-article/{id}', [ArticleController::class, 'edit'])->name('article.edit');

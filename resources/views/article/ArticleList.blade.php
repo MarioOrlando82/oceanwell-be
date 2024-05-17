@@ -11,7 +11,7 @@
             <div class="flex h-full flex-col">
                 <div class="mx-auto mb-6 flex w-11/12 justify-between">
                     <div class="flex w-1/3 align-middle">
-                        <form id="articleCategoryForm" action="{{ route('article.index') }}" method="GET"
+                        <form id="articleCategoryForm" action="{{ route('article.list') }}" method="GET"
                             class="flex w-1/2">
                             {{-- @csrf --}}
                             <select name="selectedCategory"

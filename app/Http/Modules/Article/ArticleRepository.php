@@ -15,13 +15,19 @@ class ArticleRepository
         return Article::findOrFail($id);
     }
 
-    public function getAllArticles(): Collection
+    public function getAllArticles(?int $limit = null): Collection
     {
+        if ($limit) {
+            return Article::limit($limit)->get();
+        }
         return Article::all();
     }
 
-    public function getAllArticlesWithPagination(int $perPage): LengthAwarePaginator
+    public function getAllArticlesWithPagination(int $perPage, ?string $sort = null): LengthAwarePaginator
     {
+        if ($sort) {
+            return Article::orderBy('created_at', $sort)->paginate($perPage);
+        }
         return Article::paginate($perPage);
     }
 
@@ -40,8 +46,16 @@ class ArticleRepository
         return Article::findOrFail($id)->delete();
     }
 
-    public function getArticleByCategoryWithPagination(int $articleCategoryId, int $perPage): LengthAwarePaginator
+    public function getArticleByCategoryWithPagination(int $articleCategoryId, int $perPage, ?string $sorted = null): LengthAwarePaginator
     {
+        if ($sorted) {
+            return Article::where('article_category_id', $articleCategoryId)->orderBy('created_at', $sorted)->paginate($perPage);
+        }
         return Article::where('article_category_id', $articleCategoryId)->paginate($perPage);
+    }
+
+    public function getArticlesByDateRange(string $startDate, string $endDate): Collection
+    {
+        return Article::whereBetween('created_at', [$startDate, $endDate])->get();
     }
 }
