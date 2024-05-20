@@ -1,0 +1,72 @@
+.body{
+    height: 100%;
+    background-image: url(../Aset/Background/AboutUs1.png);
+    padding: 20px 20px;
+}
+
+/* konten 1 keseluruhan */
+.body .konten1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* konten 1 judul */
+.body .konten1 h1{
+    color: #01CBE1;
+    font-weight: 700;
+    padding-top: 50px;
+    font-size: 64px;
+}
+
+/* konten 1 tulisannya */
+.body .konten1 p{
+    color: white;
+    padding-bottom: 60px;
+    font-weight: 400;
+    font-size: 3.5vh;
+    width: 80%;
+}
+
+/* judul kedua keseluruhan*/
+.body h2{
+    color: #01CBE1;
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+
+/* tulisan konten keseluruhan */
+.body p{
+    color: white;
+    font-size: 25px;
+    word-spacing: 0.1cm;
+    padding: 30px 0px;
+}
+
+/* isi judul dan tulisan konten 2 */
+.body .konten2 {
+    text-align: left;
+    width: 1000px;
+    padding: 30px;
+}
+
+/* judul konten 2 */
+.body .konten2 h2{
+   padding-bottom: 30px;
+}
+
+/* isi judul dan tulisan konten 3 */
+.body .konten3 {
+    text-align: right;
+    padding: 30px;
+    width: 1000px;
+    margin-left: 800px;
+}
+
+/* isi judul dan tulisan konten 4 */
+.body .konten4 {
+    text-align: left;
+    width: 1000px;
+    padding: 30px;
+}

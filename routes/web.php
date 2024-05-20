@@ -12,6 +12,10 @@ Route::get('/', function () {
     return view('Home');
 })->name('home');
 
+Route::get('/aboutUs', function () {
+    return view('AboutUs');
+});
+
 Route::get('/article/{id}', [ArticleController::class, 'content'])->name('article.content');
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
 
