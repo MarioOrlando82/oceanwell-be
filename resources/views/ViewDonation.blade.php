@@ -55,7 +55,7 @@
 
                 <div class="Right-Content">
 
-                    <form id="donationForm" action="/update-total/{{ $donation->id }}" method="POST"
+                    <form id="donationForm" action="/update-total-donation/{{ $donation->id }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
                         @method('patch')

@@ -9,18 +9,18 @@ use App\Http\Requests\UpdateVolunteerRequest;
 
 class VolunteerController extends Controller
 {
-    public function index()
+    public function index_volunteer()
     {
         $volunteers = Volunteer::all();
         return view('Volunteer', compact('volunteers'));
     }
 
-    public function create()
+    public function create_volunteer()
     {
         return view('AddVolunteer');
     }
 
-    public function store(Request $request)
+    public function store_volunteer(Request $request)
     {
         $image_name = $request->file('Image')->getClientOriginalName();
         $request->file('Image')->storeAs('public/images', $image_name);
@@ -35,13 +35,13 @@ class VolunteerController extends Controller
         return redirect('/volunteer');
     }
 
-    public function edit($id)
+    public function edit_volunteer($id)
     {
         $volunteer = Volunteer::findOrFail($id);
         return view('EditVolunteer', compact('volunteer'));
     }
 
-    public function update(Request $request, $id)
+    public function update_volunteer(Request $request, $id)
     {
         $image_name = $request->file('Image')->getClientOriginalName();
         $request->file('Image')->storeAs('public/images', $image_name);
@@ -57,7 +57,7 @@ class VolunteerController extends Controller
 
     }
 
-    public function delete($id)
+    public function delete_volunteer($id)
     {
         $volunteer = Volunteer::findOrFail($id);
         $picture = "/storage/images/" . $volunteer->Image;
@@ -67,13 +67,13 @@ class VolunteerController extends Controller
         return redirect('/volunteer');
     }
 
-    public function detail($id)
+    public function detail_volunteer($id)
     {
         $volunteer = Volunteer::findOrFail($id);
         return view('ViewVolunteer', compact('volunteer'));
     }
 
-    public function update_total(Request $request, $id)
+    public function update_total_volunteer(Request $request, $id)
     {
         $volunteer = Volunteer::findOrFail($id);
         $oldTotal = $volunteer->Total;

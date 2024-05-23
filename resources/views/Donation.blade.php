@@ -49,7 +49,7 @@
                     <div class="isiList">
                         @forelse ($donations as $donation)
                             <div class="list">
-                                <a href="{{ route('detail', $donation->id) }}">
+                                <a href="{{ route('detail_donation', $donation->id) }}">
                                     <img src="{{ asset('storage/images/' . $donation->Image) }}" alt="">
                                 </a>
                                 <div class="tulisan">
