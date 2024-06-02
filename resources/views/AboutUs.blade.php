@@ -10,19 +10,30 @@
 
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav-wrap">
-            <a href="./Home.html"><img src="../Aset/Logo/OceanWell's Logo.png" class="logo-nav" alt="" ></a>
-            <ul>
-                <li><a href="./AboutUs.html">About Us</a></li>
-                <li><a href="./Charity.html">Donate</a></li>
-                <li><a href="./Volunteer.html">Volunteer</a></li>
-                <li><a href="./Article.html">Articles</a></li>
-                <li><a href="./Login.html">Login</a></li>
-                <li><a href="./Register.html">Register</a></li>
-            </ul>
+    <nav>
+        <div class="navbar">
+            <div class="nav-wrap">
+                <a href="/"><img src="../Aset/Logo/OceanWell's Logo.png" class="logo-nav" alt=""></a>
+                <ul>
+                    <li><a href="/aboutUs">About Us</a></li>
+                    <li><a href="/donation">Donate</a></li>
+                    <li><a href="/volunteer">Volunteer</a></li>
+                    <li><a href="/article">Article</a></li>
+                    @if (Auth::user())
+                        <li><a href="/logout"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log
+                                Out</a></li>
+                        <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    @else
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                    @endif
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 
     <div class="banner">
         <div class="body">

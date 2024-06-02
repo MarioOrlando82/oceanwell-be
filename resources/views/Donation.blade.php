@@ -63,7 +63,7 @@
                                         </div>
                                         @can('is_admin')
                                             <div class="RightContent">
-                                                <button><a href="{{ route('edit', $donation->id) }}" class="">Edit</a>
+                                                <button><a href="{{ route('edit_donation', $donation->id) }}" class="">Edit</a>
                                                 </button>
                                             </div>
                                             <form action="/delete-donation/{{ $donation->id }}" method="POST">

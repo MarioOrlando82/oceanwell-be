@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Edit Volunteer - OceanWell</title>
+        <title>Add Donation - OceanWell</title>
         <link rel="stylesheet" href="{{ asset('css/Edit.css') }}">
         <link rel="stylesheet" href="{{ asset('css/NavFoot.css') }}">
 
@@ -46,7 +45,7 @@
                 </label>
             </div>
 
-            <form action="/update-volunteer/{{ $volunteer->id }}" method="POST" enctype="multipart/form-data">
+            <form action="/update-donation/{{ $donation->id }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('patch')
                 <div class="form-box">
@@ -54,16 +53,15 @@
                     <div class="form-column" id="column-left">
                         <div class="form-input">
                             <label for="title">Title</label>
-                            <input type="text" id="title" name="Title" value="{{ $volunteer->Title }}" />
+                            <input type="text" id="title" name="Title" value="{{ $donation->Title }}" />
                         </div>
                         <div class="form-input">
                             <label for="author">Fundraiser</label>
-                            <input type="text" id="author" name="Fundraiser"
-                                value="{{ $volunteer->Fundraiser }}" />
+                            <input type="text" id="author" name="Fundraiser" value="{{ $donation->Fundraiser }}" />
                         </div>
                         <div class="form-input">
-                            <label for="number">People</label>
-                            <input type="number" id="people" name="People" value="{{ $volunteer->People }}" />
+                            <label for="number">Limit</label>
+                            <input type="number" id="people" name="Limit" value="{{ $donation->Limit }}" />
                         </div>
                         <div class="form-input">
                             <label for="image">Image</label>
@@ -74,8 +72,7 @@
                     <div class="form-column">
                         <div class="form-input">
                             <label for="editor">Description</label>
-                            <input type="text" id="description" name="Description"
-                                value="{{ $volunteer->Description }}" />
+                            <input type="text" id="description" name="Description" value="{{ $donation->Description }}" />
                         </div>
                     </div>
                 </div>

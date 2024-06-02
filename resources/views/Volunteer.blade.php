@@ -63,7 +63,7 @@
                                         </div>
                                         @can('is_admin')
                                             <div class="RightContent">
-                                                <button><a href="{{ route('edit', $volunteer->id) }}"
+                                                <button><a href="{{ route('edit_volunteer', $volunteer->id) }}"
                                                         class="">Edit</a>
                                                 </button>
                                             </div>
