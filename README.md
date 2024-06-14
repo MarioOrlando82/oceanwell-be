@@ -2,6 +2,14 @@
 
 This repository contains the code for the Oceanwell project, built with Laravel and styled using Tailwind CSS.
 
+What is OceanWell:
+A web project designed to raise awareness and drive action for marine conservation. OceanWell provides an innovative platform where users can donate to conservation projects, volunteer for marine preservation activities, and access educational content about the importance of marine biodiversity.
+
+Key Features:
+1. Donation Platform: Engage with an effective donation system that ensures transparency, ease, and motivation for users to support marine conservation initiatives.
+2. Volunteer Integration: Seamlessly sign up for, discover, and participate in ocean conservation events through our integrated volunteer platform.
+3. Educational Content: Explore high-quality, informative articles that enhance understanding and awareness of marine environmental issues.
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
